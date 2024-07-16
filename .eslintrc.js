@@ -35,5 +35,6 @@ module.exports = {
     '@typescript-eslint/no-var-requires': 0,
     '@typescript-eslint/no-explicit-any': ['off'],
     '@typescript-eslint/no-unused-vars': ['warn'],
+    '@typescript-eslint/ban-types': 0,
   },
 };

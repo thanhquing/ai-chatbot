@@ -1,69 +1,39 @@
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-import typescript from '@rollup/plugin-typescript';
-import clean from '@rollup-extras/plugin-clean';
-import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import babel from '@rollup/plugin-babel';
-import terser from '@rollup/plugin-terser';
-import postcss from 'rollup-plugin-postcss';
-import autoprefixer from 'autoprefixer';
-import { dts } from 'rollup-plugin-dts';
-
-const packageJson = require('./package.json');
+import babel from 'rollup-plugin-babel'
+import resolve from '@rollup/plugin-node-resolve'
+import external from 'rollup-plugin-peer-deps-external'
+import postcss from 'rollup-plugin-postcss'
+import { terser } from 'rollup-plugin-terser'
+import commonjs from '@rollup/plugin-commonjs'
+import path from 'path'
 
 export default [
   {
-    input: './src/index.ts',
+    input: './build/index.js',
     output: [
       {
-        file: packageJson.main,
+        file: 'dist/main.js',
         format: 'cjs',
-        interop: 'compat',
-        exports: 'named',
-        sourcemap: true,
-        inlineDynamicImports: true,
       },
       {
-        file: packageJson.module,
-        format: 'esm',
+        file: 'dist/main.es.js',
+        format: 'es',
         exports: 'named',
-        sourcemap: true,
-        inlineDynamicImports: true,
       },
     ],
     plugins: [
-      clean('dist'),
-      peerDepsExternal(),
-      resolve(),
-      commonjs(),
-      babel({
-        babelHelpers: 'bundled',
-        exclude: 'node_modules/**',
-      }),
-      typescript({
-        tsconfig: './tsconfig.build.json',
-      }),
-      terser(),
       postcss({
-        plugins: [autoprefixer],
-        modules: {
-          namedExport: true,
-          //minify classnames
-          generateScopedName: '[hash:base64:8]',
-        },
-        //uncomment the following 2 lines if you want to extract styles into a separated file
-        /*extract: 'styles.css',
-        inject: false,*/
+        plugins: [],
         minimize: true,
-        sourceMap: true,
-        extensions: ['.scss', '.css'],
-        use: ['sass'],
+        extract: path.resolve('dist/main.css'),
       }),
+      babel({
+        exclude: 'node_modules/**',
+        presets: ['@babel/preset-react'],
+      }),
+      commonjs(),
+      external(),
+      resolve(),
+      terser(),
     ],
   },
-  {
-    input: 'dist/index.d.ts',
-    output: [{ file: 'dist/index.d.ts', format: 'es' }],
-    plugins: [dts()],
-  },
-];
+]

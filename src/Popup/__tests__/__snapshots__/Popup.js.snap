@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-popup-wrapper"
+>
+  <div
+    className="HD_aichatbot-popup"
+  >
+    <div
+      className="HD_aichatbot-popup-header"
+    >
+      <span />
+    </div>
+    <div
+      className="HD_aichatbot-popup-content"
+      style={
+        Object {
+          "color": "#333",
+        }
+      }
+    />
+    <div
+      className="HD_aichatbot-popup-footer"
+    />
+  </div>
+</div>
+`;

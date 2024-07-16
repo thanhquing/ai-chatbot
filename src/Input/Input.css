@@ -1,0 +1,60 @@
+.HD_aichatbot-container-input {
+  display: flex;
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  background: #fff;
+  align-items: center;
+}
+
+.HD_aichatbot-input {
+  flex: 1;
+  height: 40px;
+  padding: 0 5px;
+  border: none;
+  border-radius: 5px;
+  color: #333;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.HD_aichatbot-input-textarea {
+  height: 37px;
+  padding: 10px 5px;
+  resize: none;
+}
+
+.HD_aichatbot-input-buttons {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+}
+
+.HD_aichatbot-input-buttons > * {
+  display: flex;
+  flex-direction: row;
+}
+
+.HD_aichatbot-input-buttons .HD_aichatbot-button:nth-child(even) {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.HD_aichatbot-input-buttons .HD_aichatbot-button:last-child {
+  margin-right: 0;
+}
+
+.HD_aichatbot-left-padding {
+  padding-left: 10px;
+  padding-right: 0px !important;
+}
+
+.HD_aichatbot-right-padding {
+  padding-right: 10px;
+  padding-left: 0px !important;
+}
+
+.HD_aichatbot-input::placeholder {
+  color: #afafaf;
+}

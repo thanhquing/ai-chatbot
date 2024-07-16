@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeetingLink component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-mtlink"
+>
+  <div
+    className="HD_aichatbot-mtlink-content"
+  >
+    <div
+      className="HD_aichatbot-mtlink-item"
+    >
+      <div
+        className="HD_aichatbot-mtlink-title"
+      />
+    </div>
+    <div
+      className="HD_aichatbot-mtlink-btn"
+      onClick={[Function]}
+    >
+      <MdVideoCall
+        className="HD_aichatbot-mtlink-svg"
+      />
+    </div>
+  </div>
+</div>
+`;

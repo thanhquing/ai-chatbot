@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReplyMessage component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-mbox-reply"
+  onClick={[Function]}
+  style={null}
+>
+  <div
+    className="HD_aichatbot-mbox-reply-left"
+  >
+    <div
+      className="HD_aichatbot-mbox-reply-owner"
+      style={null}
+    >
+      Unknown
+    </div>
+    <div
+      className="HD_aichatbot-mbox-reply-message"
+    >
+      ...
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeetingItem component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-container-mtitem"
+  onClick={null}
+>
+  <audio
+    autoPlay={true}
+    loop={true}
+    muted={true}
+    src={null}
+  />
+  <div
+    className="HD_aichatbot-mtitem"
+  >
+    <div
+      className="HD_aichatbot-mtitem-top"
+    >
+      <div
+        className="HD_aichatbot-mtitem-subject"
+      />
+      <div
+        className="HD_aichatbot-mtitem-share"
+        onClick={[Function]}
+      >
+        <MdLink />
+      </div>
+    </div>
+    <div
+      className="HD_aichatbot-mtitem-body"
+    >
+      <div
+        className="HD_aichatbot-mtitem-body--avatars"
+      />
+      <div
+        className="HD_aichatbot-mtitem-body--functions"
+      >
+        <div
+          className="HD_aichatbot-mtitem-button"
+          onClick={[Function]}
+        >
+          <MdVideoCall />
+        </div>
+      </div>
+    </div>
+    <div
+      className="HD_aichatbot-mtitem-footer"
+    >
+      <span
+        className="HD_aichatbot-mtitem-date"
+      >
+        just now
+      </span>
+    </div>
+  </div>
+</div>
+`;

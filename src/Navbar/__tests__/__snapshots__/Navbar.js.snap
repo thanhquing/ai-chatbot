@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-navbar light"
+>
+  <div
+    className="HD_aichatbot-navbar-item HD_aichatbot-navbar-item__left"
+  />
+  <div
+    className="HD_aichatbot-navbar-item HD_aichatbot-navbar-item__center"
+  />
+  <div
+    className="HD_aichatbot-navbar-item HD_aichatbot-navbar-item__right"
+  />
+</div>
+`;

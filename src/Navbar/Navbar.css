@@ -1,0 +1,31 @@
+.HD_aichatbot-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 10px;
+}
+
+.HD_aichatbot-navbar.light {
+  background: #f4f4f4;
+}
+
+.HD_aichatbot-navbar.dark {
+  background: #2f414c;
+}
+
+.HD_aichatbot-navbar-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.HD_aichatbot-navbar-item > * {
+  display: flex;
+  flex-direction: row;
+}
+
+.HD_aichatbot-navbar-item > * > * {
+  margin-left: 5px;
+}

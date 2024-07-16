@@ -1,13 +1,97 @@
 {
-  "name": "react-rollup-npm-boilerplat",
-  "version": "1.0.0",
-  "description": "An example of creating a react npm package",
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.esm.js",
-  "files": [
-    "dist"
+  "name": "ai-chatbot",
+  "version": "0.0.1",
+  "description": "AI chatbot elements",
+  "author": "thanh.nguyen <thanhquing@gmail.com>",
+  "main": "dist/main.js",
+  "types": "dist/type.d.ts",
+  "module": "dist/main.es.js",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-react": "^7.17.12",
+    "@rollup/plugin-commonjs": "^22.0.0",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    "@types/identicon.js": "^2.3.1",
+    "@types/jest": "^27.5.1",
+    "@types/node": "^17.0.34",
+    "@types/progressbar.js": "^1.1.2",
+    "@types/react": "^18.0.9",
+    "@types/react-dom": "^18.0.4",
+    "@types/react-icons": "^3.0.0",
+    "babel-jest": "21.2.0",
+    "babel-loader": "^8.2.5",
+    "copyfiles": "^2.4.1",
+    "css-loader": "^6.7.1",
+    "enzyme": "^2.9.1",
+    "enzyme-to-json": "^1.5.1",
+    "identicon.js": "^2.3.1",
+    "jest": "21.2.1",
+    "lorem-ipsum": "^1.0.4",
+    "mini-css-extract-plugin": "^2.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "react-test-renderer": "^18.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.75.6",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-loader": "^9.3.0",
+    "typescript": "^4.6.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thanhquing/ai-chatbot.git"
+  },
+  "keywords": [
+    "react",
+    "reactjs",
+    "chat",
+    "css",
+    "chat",
+    "components",
+    "thanhquing"
   ],
-  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "jest": {
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
+  },
+  "browser": {
+    "[module-name]": false
+  },
+  "bugs": {
+    "url": "https://github.com/thanhquing/ai-chatbot/issues"
+  },
+  "homepage": "https://github.com/thanhquing/ai-chatbot#readme",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "build": "yarn run clear:build && node node_modules/typescript/bin/tsc -p tsconfig.prod.json && yarn run copy-files",
+    "copy-files": "copyfiles -u 1 src/**/*.css build/",
+    "clear:build": "rimraf dist build",
+    "move:types": "copyfiles -u 1 src/type.d.ts dist/",
+    "test": "react-scripts test --env=jsdom",
+    "test:coverage": "npm run test -- --coverage --collectCoverageFrom=src/**/*.js --collectCoverageFrom=!src/index.js",
+    "build:lib": "yarn run build && rollup -c && yarn run move:types",
+    "prepare": "npm run build:lib"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "progressbar.js": "^1.1.0",
+    "react-icons": "^4.3.1",
+    "react-spinkit": "^3.0.0",
+    "timeago.js": "^4.0.2"
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -19,108 +103,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "scripts": {
-    "storybook": "storybook dev -p 6006",
-    "commit": "git add . && cz",
-    "semantic-release": "standard-version",
-    "build-storybook": "storybook build",
-    "build-lib": "rm -rf lib && mkdir lib && rollup -c --bundleConfigAsCjs && cp -r ./dist ./lib && cp package.json LICENSE README.md ./lib",
-    "test": "jest -c jest/jest.config.js --verbose",
-    "test:watch": "pnpm run test --watch",
-    "test:clear": "pnpm run test --clearCache"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DonAdam2/react-rollup-npm-boilerplate.git"
-  },
-  "keywords": [
-    "react",
-    "button"
-  ],
-  "author": "Adam Morsi <adam.morsi@yahoo.com> (https://github.com/DonAdam2)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/DonAdam2/react-rollup-npm-boilerplate/issues"
-  },
-  "homepage": "https://github.com/DonAdam2/react-rollup-npm-boilerplate#readme",
-  "devDependencies": {
-    "@babel/core": "7.24.7",
-    "@babel/preset-react": "7.24.7",
-    "@babel/preset-typescript": "7.24.7",
-    "@chromatic-com/storybook": "^1.6.1",
-    "@rollup-extras/plugin-clean": "1.3.9",
-    "@rollup/plugin-babel": "6.0.4",
-    "@rollup/plugin-commonjs": "26.0.1",
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@rollup/plugin-terser": "0.4.4",
-    "@rollup/plugin-typescript": "11.1.6",
-    "@storybook/addon-actions": "^8.1.11",
-    "@storybook/addon-essentials": "^8.1.11",
-    "@storybook/addon-interactions": "^8.1.11",
-    "@storybook/addon-links": "^8.1.11",
-    "@storybook/blocks": "^8.1.11",
-    "@storybook/preset-scss": "1.0.3",
-    "@storybook/react": "^8.1.11",
-    "@storybook/react-vite": "^8.1.11",
-    "@storybook/test": "^8.1.11",
-    "@testing-library/dom": "10.3.1",
-    "@testing-library/jest-dom": "6.4.6",
-    "@testing-library/react": "16.0.0",
-    "@testing-library/react-hooks": "8.0.1",
-    "@testing-library/user-event": "14.5.2",
-    "@types/jest": "29.5.12",
-    "@types/node": "20.14.10",
-    "@types/react": "18.3.3",
-    "@types/react-dom": "18.3.0",
-    "@types/react-test-renderer": "18.3.0",
-    "@typescript-eslint/eslint-plugin": "7.16.0",
-    "@typescript-eslint/parser": "7.16.0",
-    "autoprefixer": "10.4.19",
-    "babel-jest": "29.7.0",
-    "babel-loader": "9.1.3",
-    "commitizen": "4.3.0",
-    "css-loader": "7.1.2",
-    "cz-conventional-changelog": "3.3.0",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-jest": "28.6.0",
-    "eslint-plugin-jest-dom": "5.4.0",
-    "eslint-plugin-prettier": "5.1.3",
-    "eslint-plugin-react": "7.34.3",
-    "eslint-plugin-react-hooks": "4.6.2",
-    "eslint-plugin-storybook": "0.8.0",
-    "eslint-plugin-testing-library": "6.2.2",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "29.7.0",
-    "jest-environment-jsdom": "29.7.0",
-    "jest-resolve": "29.7.0",
-    "jest-watch-typeahead": "2.2.2",
-    "postcss": "8.4.39",
-    "prettier": "3.3.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-test-renderer": "18.3.1",
-    "rollup": "4.18.1",
-    "rollup-plugin-dts": "6.1.1",
-    "rollup-plugin-peer-deps-external": "2.2.4",
-    "rollup-plugin-postcss": "4.0.2",
-    "sass": "1.77.6",
-    "sass-loader": "14.2.1",
-    "standard-version": "9.5.0",
-    "storybook": "^8.1.11",
-    "style-loader": "4.0.0",
-    "to-camel-case": "1.0.0",
-    "tslib": "2.6.3",
-    "typescript": "5.5.3"
-  },
-  "peerDependencies": {
-    "react": "^16.12.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0",
-    "react-dom": "^16.12.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^20.0.0 || ^21.0.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

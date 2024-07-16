@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MeetingMessage component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-mbox-mtmg"
+>
+  <div
+    className="HD_aichatbot-mtmg"
+  >
+    <div
+      className="HD_aichatbot-mtmg-subject"
+    >
+      Unknown Meeting
+    </div>
+    <div
+      className="HD_aichatbot-mtmg-body"
+      onClick={[Function]}
+    >
+      <div
+        className="HD_aichatbot-mtmg-item"
+      >
+        <FaCalendar />
+        <div
+          className="HD_aichatbot-mtmg-content"
+        >
+          <span
+            className="HD_aichatbot-mtmg-title"
+          />
+          <span
+            className="HD_aichatbot-mtmg-date"
+          >
+            just now
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="HD_aichatbot-mtmg-body-bottom"
+      onClick={[Function]}
+    >
+      <div
+        className="HD_aichatbot-mtmg-body-bottom--bttitle"
+      >
+        <FaCaretRight />
+        <span />
+      </div>
+    </div>
+    <div
+      className="HD_aichatbot-mtmg-toogleContent"
+    />
+  </div>
+</div>
+`;

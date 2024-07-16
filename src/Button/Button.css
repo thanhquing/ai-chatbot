@@ -1,0 +1,87 @@
+.HD_aichatbot-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 8px;
+  text-align: center;
+  box-sizing: border-box;
+  background: #3979aa;
+  color: white;
+  transition: all 0.15s ease;
+  user-select: none;
+  border: none;
+  outline: none;
+  border: none;
+  position: relative;
+}
+
+.HD_aichatbot-button-icon--container {
+  display: flex;
+  align-items: center;
+}
+
+.HD_aichatbot-button:hover {
+  opacity: 0.8;
+}
+
+.HD_aichatbot-button:active {
+  opacity: 0.6;
+}
+
+.HD_aichatbot-button.outline {
+  background: rgba(0, 0, 0, 0) !important;
+  border: 1px solid #3979aa;
+  color: #3979aa;
+}
+
+.HD_aichatbot-button.outline:hover {
+  opacity: 0.6;
+}
+
+.HD_aichatbot-button.outline:active {
+  opacity: 0.3;
+}
+
+.HD_aichatbot-button.transparent {
+  background: rgba(0, 0, 0, 0) !important;
+}
+
+.HD_aichatbot-button.transparent:hover {
+  opacity: 0.6;
+}
+
+.HD_aichatbot-button.transparent:active {
+  opacity: 0.3;
+}
+
+.HD_aichatbot-button-icon {
+  position: relative;
+  font-size: 18px;
+  display: flex;
+  padding: 0 3px;
+}
+
+.HD_aichatbot-button-badge {
+  border-radius: 4px;
+  padding: 4px;
+  background: #f64b34;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  font-size: 10px;
+}
+
+.HD_aichatbot-button.circle {
+  min-width: 35px;
+  min-height: 35px;
+  border: 1px solid #3979aa;
+  border-radius: 100%;
+}

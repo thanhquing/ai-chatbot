@@ -4,6 +4,7 @@
 /lib
 /coverage
 .nyc_output
+build
 
 #docs
 /docs
@@ -21,3 +22,9 @@ stats.json
 
 #npmrc because i'm storing my font awesome token inside it
 .npmrc
+
+# Environment file
+.env
+.env.local
+.env.staging
+.env.production

@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropdown component should render without issues 1`] = `
+<div
+  className="HD_aichatbot-dropdown-container"
+  onBlur={[Function]}
+>
+  <Button
+    backgroundColor="#3979aa"
+    buttonRef={null}
+    className={null}
+    color="white"
+    disabled={false}
+    icon={null}
+    onClick={[Function]}
+    text=""
+    title={null}
+    type={null}
+  />
+  <div
+    className="HD_aichatbot-dropdown default HD_aichatbot-dropdown-open__nortwest"
+  >
+    <ul />
+  </div>
+</div>
+`;
