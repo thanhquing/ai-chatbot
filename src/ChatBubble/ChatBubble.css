@@ -1,0 +1,82 @@
+@keyframes pulsing {
+  to {
+    box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
+.HD_aichatbot-float-bubble-container {
+  @apply fixed bottom-8 right-8 w-14 h-14 inline-flex items-center justify-center rounded-full bg-primary text-center font-medium text-white hover:bg-opacity-90 cursor-pointer;
+
+  transform: translatey(0px);
+  animation: pulse 1.5s infinite;
+  box-shadow: 0 0 0 0 #3c50e0;
+  -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+  transition: all 300ms ease-in-out;
+  z-index: 999999;
+}
+
+.HD_aichatbot-float-bubble-chatbox-container {
+  position: fixed;
+  bottom: 120px;
+  right: -400px;
+  width: 100%;
+  max-width: 375px;
+  height: 640px;
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: right 0.4s ease-out;
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.HD_aichatbot-float-bubble-chatbox-container.open {
+  right: 32px;
+  transition: right 0.3s ease-in;
+}
+
+.HD_aichatbot-float-bubble-chatbox-header {
+  background-color: #3c50e0;
+  height: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.HD_aichatbot-float-bubble-chatbox-header .HD_aichatbot-float-bubble-chatbox-avatar {
+  border-radius: 100%;
+}
+.HD_aichatbot-float-bubble-chatbox-header .HD_aichatbot-float-bubble-chatbox-title {
+  color: #fff;
+  font-size: 24px;
+}
+
+.HD_aichatbot-float-bubble-chatbox-body {
+  height: 440px;
+}
+
+.HD_aichatbot-float-bubble-chatbox-actions {
+  height: 100px;
+  position: relative;
+}
+.HD_aichatbot-float-bubble-chatbox-actions .HD_aichatbot-float-bubble-chatbox-chat-input {
+  width: 100%;
+  height: 48px;
+  padding: 12px;
+  /* border: 1px solid #ccc; */
+  resize: none;
+  outline: none;
+  overflow: hidden;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.HD_aichatbot-float-bubble-chatbox-actions .HD_aichatbot-float-bubble-chatbox-chat-send-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color: #3c50e0;
+  font-size: 20px;
+}

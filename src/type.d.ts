@@ -1096,6 +1096,14 @@ export type MessageType =
 
 export type MessageBoxType = MessageType & IMessageBoxProps
 
+/**
+ * IChatBubbleProps Interface
+ * @prop defaultOpen The ChatBubble's open flag by default and optional.
+ */
+interface IChatBubbleProps{
+  defaultOpen?: boolean;
+}
+
 export class ChatItem extends React.Component<IChatItemProps> {}
 export class ChatList extends React.Component<IChatListProps> {}
 export class MessageBox extends React.Component<MessageBoxType> {}
@@ -1122,3 +1130,4 @@ export class Navbar extends React.Component<INavbarProps> {}
 export class Input extends React.Component<IInputProps> {}
 export class Dropdown extends React.Component<IDropdownProps> {}
 export class Circle extends React.Component<ICircleProps> {}
+export class ChatBubble extends React.Component<IChatBubbleProps> {}
