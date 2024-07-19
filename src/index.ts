@@ -1,3 +1,5 @@
+import './global.css'
+
 import MessageBox from './MessageBox/MessageBox'
 import ChatItem from './ChatItem/ChatItem'
 import ChatList from './ChatList/ChatList'

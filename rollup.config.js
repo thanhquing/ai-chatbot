@@ -5,6 +5,8 @@ import postcss from 'rollup-plugin-postcss'
 import { terser } from 'rollup-plugin-terser'
 import commonjs from '@rollup/plugin-commonjs'
 import path from 'path'
+import tailwindcss from 'tailwindcss';
+import autoprefixer from 'autoprefixer';
 
 export default [
   {
@@ -22,7 +24,10 @@ export default [
     ],
     plugins: [
       postcss({
-        plugins: [],
+        plugins: [
+          tailwindcss,
+          autoprefixer,
+        ],
         minimize: true,
         extract: path.resolve('dist/main.css'),
       }),
