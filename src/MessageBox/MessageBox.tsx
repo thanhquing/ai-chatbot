@@ -24,7 +24,7 @@ import { format } from 'timeago.js'
 import classNames from 'classnames'
 import { MessageBoxType } from '../type'
 
-const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = true, styles, ...props }) => {
+const MessageBox: React.FC<MessageBoxType> = ({ focus = false, notch = false, styles, ...props }) => {
   const prevProps = useRef(focus)
   const messageRef = useRef<HTMLDivElement>(null)
 

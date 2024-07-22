@@ -9,7 +9,7 @@
 
   transform: translatey(0px);
   animation: pulse 1.5s infinite;
-  box-shadow: 0 0 0 0 #3c50e0;
+  box-shadow: 0 0 0 0 #2cc9b6;
   -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
   -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -38,7 +38,7 @@
 }
 
 .HD_aichatbot-float-bubble-chatbox-header {
-  background-color: #3c50e0;
+  background-color: #2cc9b6;
   height: 100px;
   display: flex;
   justify-content: flex-start;
@@ -50,13 +50,22 @@
 .HD_aichatbot-float-bubble-chatbox-header .HD_aichatbot-float-bubble-chatbox-avatar {
   border-radius: 100%;
 }
-.HD_aichatbot-float-bubble-chatbox-header .HD_aichatbot-float-bubble-chatbox-title {
+.HD_aichatbot-float-bubble-chatbox-header
+  .HD_aichatbot-float-bubble-chatbox-info
+  .HD_aichatbot-float-bubble-chatbox-title {
   color: #fff;
-  font-size: 24px;
+  font-size: 20px;
+}
+.HD_aichatbot-float-bubble-chatbox-header
+  .HD_aichatbot-float-bubble-chatbox-info
+  .HD_aichatbot-float-bubble-chatbox-subtitle {
+  color: #fff;
+  font-size: 14px;
 }
 
 .HD_aichatbot-float-bubble-chatbox-body {
-  height: 440px;
+  height: 480px;
+  background-color: #2dc9b621;
 }
 
 .HD_aichatbot-float-bubble-chatbox-actions {
@@ -65,18 +74,20 @@
 }
 .HD_aichatbot-float-bubble-chatbox-actions .HD_aichatbot-float-bubble-chatbox-chat-input {
   width: 100%;
-  height: 48px;
-  padding: 12px;
-  /* border: 1px solid #ccc; */
+  height: 60px;
+  padding: 18px 12px;
+  font-size: 14px;
+  color: #505050;
   resize: none;
   outline: none;
   overflow: hidden;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 .HD_aichatbot-float-bubble-chatbox-actions .HD_aichatbot-float-bubble-chatbox-chat-send-icon {
   position: absolute;
   top: 16px;
   right: 16px;
-  color: #3c50e0;
-  font-size: 20px;
+  color: #2cc9b6;
+  font-size: 28px;
 }

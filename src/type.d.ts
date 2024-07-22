@@ -163,20 +163,20 @@ export interface IMessage {
   id: string | number
   position: string
   text: string
-  title: string
-  focus: boolean
-  date: number | Date
+  title?: string
+  focus?: boolean
+  date?: number | Date
   dateString?: string
   avatar?: string
-  titleColor: string
-  forwarded: boolean
-  replyButton: boolean
-  removeButton: boolean
-  status: 'waiting' | 'sent' | 'received' | 'read'
+  titleColor?: string
+  forwarded?: boolean
+  replyButton?: boolean
+  removeButton?: boolean
+  status?: 'waiting' | 'sent' | 'received' | 'read'
   statusTitle?: string
-  notch: boolean
+  notch?: boolean
   copiableDate?: boolean
-  retracted: boolean
+  retracted?: boolean
   className?: string
   letterItem?: ILetterItem
   reply?: IReplyMessage | any
@@ -589,7 +589,7 @@ export interface IMessageListProps {
   }
   children?: React.ReactNode
   isShowChild?: boolean
-  referance: any
+  referance?: any
   dataSource: MessageType[]
   actionButtons?: MeetingLinkActionButtons[]
   lockable: boolean
@@ -617,6 +617,7 @@ export interface IMessageListProps {
   onMeetingLinkClick?: MessageListEvent
   messageBoxStyles?: React.CSSProperties
   notchStyle?: React.CSSProperties
+  isThinking?: boolean
 }
 
 /**
