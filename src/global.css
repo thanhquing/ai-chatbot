@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* https://developer.mozilla.org/en-US/docs/Web/CSS/color-scheme */
+  color-scheme: only light !important;
+}
+
 /* HTML: <div class="loader"></div> */
 .HD_aichatbot-loader {
   width: 30px;
