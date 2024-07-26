@@ -8,6 +8,22 @@
   overflow: auto;
   position: relative;
   flex: 1;
+  height: 480px;
+}
+
+.HD_aichatbot-mlist::-webkit-scrollbar {
+  width: 5px;
+}
+ 
+.HD_aichatbot-mlist::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.HD_aichatbot-mlist::-webkit-scrollbar-thumb {
+  background-color: #2cc9b6;
+  outline: none;
+  border-radius: 5px;
+  opacity: 0.8;
 }
 
 .HD_aichatbot-mlist-down-button {

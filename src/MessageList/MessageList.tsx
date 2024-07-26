@@ -199,7 +199,7 @@ const MessageList: FC<IMessageListProps> = ({
             notchStyle={props.notchStyle}
           />
         ))}
-        {isThinking &&  <MessageBox className='message-thinking' id="thinking" position='left'  type='text' text='I am thinking...'/>}
+        {isThinking && <div className="HD_aichatbot-loader"></div>}
       </div>
       {downButton === true && _downButton && toBottomHeight !== '100%' && (
         <div className="HD_aichatbot-mlist-down-button" onClick={toBottom}>

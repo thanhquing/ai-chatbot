@@ -3,6 +3,7 @@
   display: block;
   overflow-x: hidden;
   min-width: 300px;
+  margin-bottom: 10px;
 }
 
 .HD_aichatbot-mbox-forward {
@@ -121,8 +122,8 @@
   color: #fff;
   border-radius: 5px;
   border-top-left-radius: 0px;
-  margin-left: 15px;
-  margin-right: 5px;
+  margin-left: 5px;
+  margin-right: 80px;
   margin-top: 3px;
   flex-direction: column;
   margin-bottom: 5px;
@@ -157,8 +158,8 @@
 
 .HD_aichatbot-mbox.HD_aichatbot-mbox-right {
   float: right;
-  margin-left: 5px;
-  margin-right: 15px;
+  margin-left:80px;
+  margin-right: 5px;
   border-top-right-radius: 0px;
   border-top-left-radius: 5px;
   color: #000;
