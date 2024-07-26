@@ -208,9 +208,9 @@
   color: #efefefb3 !important;
 }
 
-.HD_aichatbot-mbox-text:after {
+/* .HD_aichatbot-mbox-text:after {
   content: '\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0\00a0';
-}
+} */
 
 .HD_aichatbot-mbox-time {
   display: flex;

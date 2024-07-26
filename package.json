@@ -1,11 +1,14 @@
 {
   "name": "ai-chatbot",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "AI chatbot elements",
   "author": "thanh.nguyen <thanhquing@gmail.com>",
   "main": "dist/main.js",
   "types": "dist/type.d.ts",
   "module": "dist/main.es.js",
+  "files": [
+    "dist/*"
+  ],
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "@babel/preset-react": "^7.17.12",
