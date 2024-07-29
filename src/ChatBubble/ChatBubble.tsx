@@ -35,7 +35,7 @@ const ChatBubble: React.FC<IChatBubbleProps> = () => {
 
       // const result = await ChatServices.sendMessage({ query: message });
 
-      const result = await fetch('https://fe4e-14-161-35-153.ngrok-free.app/chat', {
+      const result = await fetch('https://hm-agent-model.onrender.com/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

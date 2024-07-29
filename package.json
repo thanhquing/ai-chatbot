@@ -1,6 +1,6 @@
 {
   "name": "ai-chatbot",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "AI chatbot elements",
   "author": "thanh.nguyen <thanhquing@gmail.com>",
   "main": "dist/main.js",
